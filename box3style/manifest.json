@@ -1,0 +1,30 @@
+{
+    "name": "box3新紫色样式",
+    "description": "由ray制作的编程猫代码岛三全新的紫色样式",
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "permissions": [
+        "background",
+        "tabs",
+        "contextMenus",
+        "cookies",
+        "https://*.codemao.cn/*"
+    ],
+    "content_scripts": [{
+        "matches": ["https://box3.codemao.cn/*", "https://box3create.codemao.cn/*"],
+        "js": ["stylecss.js"]
+    }],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "设置box3样式",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["bg.js"]
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
